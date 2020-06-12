@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>.Net Json对象处理 // My New Hugo Site</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.72.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://horenz.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=".Net Json对象处理"/>
+<meta name="twitter:description" content=".NET对象转Json 1.通过序列化将.net对象转换为JSon字符串 JsonConvert.SerializeObject(oject) List&lt;Student&gt; studentList = new List&lt;Student&gt;(); studentList.add(new Student()) lbMsg.InnerText = JsonConvert.SerializeObject(studentList); 2.使用LINQ to JSON定制JSON数据 使用JsonConvert对象的SerializeObject只是简单地将一个list或集合转换为json字符串。但是，有的时候我们的前端 框架比如ExtJs对服务端返回的数据格式是有一定要求的，比如下面的数据格式，这时就需要用到JSON.NET的LINQ to JSON，LINQ to JSON的作用就是根据需要的格式来定制json数据。
+引用==Newtonsoft.Json的dll==和==using Newtonsoft.Json.Linq的命名空间== List&lt;Student&gt; studentList = new List&lt;Student&gt;(); // 添加数据  ··· //基于创建的list使用LINQ to JSON创建期望格式的JSON数据  lbMsg.InnerText = new JObject( new JProperty(&#34;total&#34;,studentList.Count), new JProperty(&#34;rows&#34;, new JArray( //使用LINQ to JSON可直接在select语句中生成JSON数据对象，无须其它转换过程  from p in studentList select new JObject( new JProperty(&#34;studentID&#34;,p.StudentID), new JProperty(&#34;name&#34;,p.Name), new JProperty(&#34;homeTown&#34;,p.Hometown) ) ) ) ).ToString(); 处理客户端提交的Json数据 1.可以使用JObject或JArray的Parse方法轻松地将json字符串转换为json对象 string inputJsonString = @&#34; [ {StudentID:&#39;100&#39;,Name:&#39;aaa&#39;,Hometown:&#39;china&#39;}, {StudentID:&#39;101&#39;,Name:&#39;bbb&#39;,Hometown:&#39;us&#39;}, {StudentID:&#39;102&#39;,Name:&#39;ccc&#39;,Hometown:&#39;england&#39;} ]&#34;; JArray jsonObj = JArray."/>
+
+    <meta property="og:title" content=".Net Json对象处理" />
+<meta property="og:description" content=".NET对象转Json 1.通过序列化将.net对象转换为JSon字符串 JsonConvert.SerializeObject(oject) List&lt;Student&gt; studentList = new List&lt;Student&gt;(); studentList.add(new Student()) lbMsg.InnerText = JsonConvert.SerializeObject(studentList); 2.使用LINQ to JSON定制JSON数据 使用JsonConvert对象的SerializeObject只是简单地将一个list或集合转换为json字符串。但是，有的时候我们的前端 框架比如ExtJs对服务端返回的数据格式是有一定要求的，比如下面的数据格式，这时就需要用到JSON.NET的LINQ to JSON，LINQ to JSON的作用就是根据需要的格式来定制json数据。
+引用==Newtonsoft.Json的dll==和==using Newtonsoft.Json.Linq的命名空间== List&lt;Student&gt; studentList = new List&lt;Student&gt;(); // 添加数据  ··· //基于创建的list使用LINQ to JSON创建期望格式的JSON数据  lbMsg.InnerText = new JObject( new JProperty(&#34;total&#34;,studentList.Count), new JProperty(&#34;rows&#34;, new JArray( //使用LINQ to JSON可直接在select语句中生成JSON数据对象，无须其它转换过程  from p in studentList select new JObject( new JProperty(&#34;studentID&#34;,p.StudentID), new JProperty(&#34;name&#34;,p.Name), new JProperty(&#34;homeTown&#34;,p.Hometown) ) ) ) ).ToString(); 处理客户端提交的Json数据 1.可以使用JObject或JArray的Parse方法轻松地将json字符串转换为json对象 string inputJsonString = @&#34; [ {StudentID:&#39;100&#39;,Name:&#39;aaa&#39;,Hometown:&#39;china&#39;}, {StudentID:&#39;101&#39;,Name:&#39;bbb&#39;,Hometown:&#39;us&#39;}, {StudentID:&#39;102&#39;,Name:&#39;ccc&#39;,Hometown:&#39;england&#39;} ]&#34;; JArray jsonObj = JArray." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://horenz.github.io/post/blog/" />
+<meta property="article:published_time" content="2020-06-12T17:20:42+08:00" />
+<meta property="article:modified_time" content="2020-06-12T17:20:42+08:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://horenz.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>My New Hugo Site</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">.Net Json对象处理</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jun 12, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      <h1 id="net对象转json">.NET对象转Json</h1>
+<h2 id="1通过序列化将net对象转换为json字符串">1.通过序列化将.net对象转换为JSon字符串</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#">JsonConvert.SerializeObject(oject)
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#">    List&lt;Student&gt; studentList = <span style="color:#66d9ef">new</span> List&lt;Student&gt;();
+    studentList.<span style="color:#66d9ef">add</span>(<span style="color:#66d9ef">new</span> Student())
+    lbMsg.InnerText = JsonConvert.SerializeObject(studentList);
+</code></pre></div><h2 id="2使用linq-to-json定制json数据">2.使用LINQ to JSON定制JSON数据</h2>
+<p>使用JsonConvert对象的SerializeObject只是简单地将一个list或集合转换为json字符串。但是，有的时候我们的前端 框架比如ExtJs对服务端返回的数据格式是有一定要求的，比如下面的数据格式，这时就需要用到JSON.NET的LINQ to JSON，LINQ to JSON的作用就是根据需要的格式来定制json数据。</p>
+<h3 id="引用newtonsoftjson的dll和using-newtonsoftjsonlinq的命名空间">引用==Newtonsoft.Json的dll==和==using Newtonsoft.Json.Linq的命名空间==</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#"> List&lt;Student&gt; studentList = <span style="color:#66d9ef">new</span> List&lt;Student&gt;();
+ <span style="color:#75715e">// 添加数据
+</span><span style="color:#75715e"></span> <span style="color:#960050;background-color:#1e0010">···</span>
+ <span style="color:#75715e">//基于创建的list使用LINQ to JSON创建期望格式的JSON数据
+</span><span style="color:#75715e"></span> lbMsg.InnerText = <span style="color:#66d9ef">new</span> JObject(
+    <span style="color:#66d9ef">new</span> JProperty(<span style="color:#e6db74">&#34;total&#34;</span>,studentList.Count),
+    <span style="color:#66d9ef">new</span> JProperty(<span style="color:#e6db74">&#34;rows&#34;</span>,
+        <span style="color:#66d9ef">new</span> JArray(
+                <span style="color:#75715e">//使用LINQ to JSON可直接在select语句中生成JSON数据对象，无须其它转换过程
+</span><span style="color:#75715e"></span>                <span style="color:#66d9ef">from</span> p <span style="color:#66d9ef">in</span> studentList
+                <span style="color:#66d9ef">select</span> <span style="color:#66d9ef">new</span> JObject(
+                    <span style="color:#66d9ef">new</span> JProperty(<span style="color:#e6db74">&#34;studentID&#34;</span>,p.StudentID),
+                    <span style="color:#66d9ef">new</span> JProperty(<span style="color:#e6db74">&#34;name&#34;</span>,p.Name),
+                    <span style="color:#66d9ef">new</span> JProperty(<span style="color:#e6db74">&#34;homeTown&#34;</span>,p.Hometown)
+                )
+            )
+        )
+).ToString();
+
+</code></pre></div><h1 id="处理客户端提交的json数据">处理客户端提交的Json数据</h1>
+<h2 id="1可以使用jobject或jarray的parse方法轻松地将json字符串转换为json对象">1.可以使用JObject或JArray的Parse方法轻松地将json字符串转换为json对象</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#">    <span style="color:#66d9ef">string</span> inputJsonString = <span style="color:#e6db74">@&#34;
+</span><span style="color:#e6db74">    [
+</span><span style="color:#e6db74">        {StudentID:&#39;100&#39;,Name:&#39;aaa&#39;,Hometown:&#39;china&#39;},
+</span><span style="color:#e6db74">        {StudentID:&#39;101&#39;,Name:&#39;bbb&#39;,Hometown:&#39;us&#39;},
+</span><span style="color:#e6db74">        {StudentID:&#39;102&#39;,Name:&#39;ccc&#39;,Hometown:&#39;england&#39;}
+</span><span style="color:#e6db74">    ]&#34;</span>;
+    JArray jsonObj = JArray.Parse(inputJsonString);
+</code></pre></div><h2 id="2使用jsonconvert的deserializeobject方法">2.使用JsonConvert的DeserializeObject方法</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#">List&lt;Student&gt; studentList = JsonConvert.DeserializeObject&lt;List&lt;Student&gt;&gt;(inputJsonString);<span style="color:#75715e">//注意这里必须为List&lt;Student&gt;类型,因为客户端提交的是一个数组json
+</span><span style="color:#75715e"></span>
+</code></pre></div>
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
