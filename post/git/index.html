@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Git // My New Hugo Site</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.72.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://horenz.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Git"/>
+<meta name="twitter:description" content="Git教程 1.创建版本库 $ git init 1.1用命令git add告诉Git，把文件添加到仓库： $ git add readme.txt .-全部 1.2用命令git commit告诉Git，把文件提交到仓库： $ git commit -m &#34;本次提交说明&#34; 1.3运行git status命令查看状态： $ git status git status命令可以让我们时刻掌握仓库当前的状态，上面的命令输出告诉我们，readme.txt被修改过了，但还没有准备提交的修改。
+git diff顾名思义就是查看difference 如果git status告诉你有文件被修改过，用git diff可以查看修改内容 2.版本变更 在Git中，我们用git log命令查看： $ git log commit 1094adb7b9b3807259d8cb349e7df1d4d6477073 (HEAD -&gt; master) Author: Michael Liao &lt;askxuefeng@gmail.com&gt; Date: Fri May 18 21:06:15 2018 &#43;0800 append GPL commit e475afc93c209a690c39c13a46716e8fa000c366 Author: Michael Liao &lt;askxuefeng@gmail.com&gt; Date: Fri May 18 21:03:36 2018 &#43;0800 add distributed commit eaadf4e385e865d25c48e7ca9c8395c3f7dfaef0 Author: Michael Liao &lt;askxuefeng@gmail."/>
+
+    <meta property="og:title" content="Git" />
+<meta property="og:description" content="Git教程 1.创建版本库 $ git init 1.1用命令git add告诉Git，把文件添加到仓库： $ git add readme.txt .-全部 1.2用命令git commit告诉Git，把文件提交到仓库： $ git commit -m &#34;本次提交说明&#34; 1.3运行git status命令查看状态： $ git status git status命令可以让我们时刻掌握仓库当前的状态，上面的命令输出告诉我们，readme.txt被修改过了，但还没有准备提交的修改。
+git diff顾名思义就是查看difference 如果git status告诉你有文件被修改过，用git diff可以查看修改内容 2.版本变更 在Git中，我们用git log命令查看： $ git log commit 1094adb7b9b3807259d8cb349e7df1d4d6477073 (HEAD -&gt; master) Author: Michael Liao &lt;askxuefeng@gmail.com&gt; Date: Fri May 18 21:06:15 2018 &#43;0800 append GPL commit e475afc93c209a690c39c13a46716e8fa000c366 Author: Michael Liao &lt;askxuefeng@gmail.com&gt; Date: Fri May 18 21:03:36 2018 &#43;0800 add distributed commit eaadf4e385e865d25c48e7ca9c8395c3f7dfaef0 Author: Michael Liao &lt;askxuefeng@gmail." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://horenz.github.io/post/git/" />
+<meta property="article:published_time" content="2020-06-14T00:26:08+08:00" />
+<meta property="article:modified_time" content="2020-06-14T00:26:08+08:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://horenz.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>My New Hugo Site</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Git</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jun 14, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      <h1 id="git教程">Git教程</h1>
+<h2 id="1创建版本库">1.创建版本库</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$ git init
+</code></pre></div><h3 id="11用命令git-add告诉git把文件添加到仓库">1.1用命令<code>git add</code>告诉Git，把文件添加到仓库：</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$ git add readme.txt  .-全部
+</code></pre></div><h3 id="12用命令git-commit告诉git把文件提交到仓库">1.2用命令<code>git commit</code>告诉Git，把文件提交到仓库：</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$ git commit -m <span style="color:#e6db74">&#34;本次提交说明&#34;</span>
+</code></pre></div><h3 id="13运行git-status命令查看状态">1.3运行<code>git status</code>命令查看状态：</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$ git status
+</code></pre></div><p><code>git status</code>命令可以让我们时刻掌握仓库当前的状态，上面的命令输出告诉我们，<code>readme.txt</code>被修改过了，但还没有准备提交的修改。</p>
+<h4 id="git-diff顾名思义就是查看difference"><code>git diff</code>顾名思义就是查看difference</h4>
+<h4 id="如果git-status告诉你有文件被修改过用git-diff可以查看修改内容">如果<code>git status</code>告诉你有文件被修改过，用<code>git diff</code>可以查看修改内容</h4>
+<h2 id="2版本变更">2.版本变更</h2>
+<h3 id="在git中我们用git-log命令查看">在Git中，我们用<code>git log</code>命令查看：</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$ git log
+commit 1094adb7b9b3807259d8cb349e7df1d4d6477073 (HEAD -&gt; master)
+Author<span style="color:#960050;background-color:#1e0010">:</span> Michael Liao &lt;askxuefeng@gmail.com&gt;
+Date<span style="color:#960050;background-color:#1e0010">:</span>   Fri May 18 21<span style="color:#960050;background-color:#1e0010">:</span>06<span style="color:#960050;background-color:#1e0010">:</span>15 2018 +0800
+
+    append GPL
+
+commit e475afc93c209a690c39c13a46716e8fa000c366
+Author<span style="color:#960050;background-color:#1e0010">:</span> Michael Liao &lt;askxuefeng@gmail.com&gt;
+Date<span style="color:#960050;background-color:#1e0010">:</span>   Fri May 18 21<span style="color:#960050;background-color:#1e0010">:</span>03<span style="color:#960050;background-color:#1e0010">:</span>36 2018 +0800
+
+    add distributed
+
+commit eaadf4e385e865d25c48e7ca9c8395c3f7dfaef0
+Author<span style="color:#960050;background-color:#1e0010">:</span> Michael Liao &lt;askxuefeng@gmail.com&gt;
+Date<span style="color:#960050;background-color:#1e0010">:</span>   Fri May 18 20<span style="color:#960050;background-color:#1e0010">:</span>59<span style="color:#960050;background-color:#1e0010">:</span>18 2018 +0800
+
+    wrote a readme file
+</code></pre></div><h3 id="使用git-reset命令回退版本">使用<code>git reset</code>命令回退版本</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$ git reset --hard HEAD^
+</code></pre></div><p>在Git中，<strong>用<code>HEAD</code>表示当前版本</strong></p>
+<p>上一个版本就是<code>HEAD^</code>，上上一个版本就是<code>HEAD^^</code></p>
+<p>当然往上100个版本写100个<code>^</code>比较容易数不过来，所以写成<code>HEAD~100</code></p>
+<pre><code class="language-ascii" data-lang="ascii">┌────┐
+│HEAD│
+└────┘
+   │
+   └──&gt; ○ append GPL
+        │
+        ○ add distributed
+        │
+        ○ wrote a readme fil
+        
+┌────┐
+│HEAD│
+└────┘
+   │
+   │    ○ append GPL
+   │    │
+   └──&gt; ○ add distributed
+        │
+        ○ wrote a readme file
+        
+</code></pre><p>用<code>git log</code>可以查看提交历史，以便确定要回退到哪个版本</p>
+<p>要重返未来，用<code>git reflog</code>查看命令历史，以便确定要回到未来的哪个版本。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$ git reflog
+e475afc HEAD@{1}<span style="color:#960050;background-color:#1e0010">:</span> reset<span style="color:#960050;background-color:#1e0010">:</span> moving to HEAD^
+1094adb (HEAD -&gt; master) HEAD@{2}<span style="color:#960050;background-color:#1e0010">:</span> commit<span style="color:#960050;background-color:#1e0010">:</span> append GPL
+e475afc HEAD@{3}<span style="color:#960050;background-color:#1e0010">:</span> commit<span style="color:#960050;background-color:#1e0010">:</span> add distributed
+eaadf4e HEAD@{4}<span style="color:#960050;background-color:#1e0010">:</span> commit (initial)<span style="color:#960050;background-color:#1e0010">:</span> wrote a readme file
+</code></pre></div><p>Git允许我们在版本的历史之间穿梭，使用命令<code>git reset --hard commit_id</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$ git reset --hard e475afc
+</code></pre></div><h3 id="版本库repository">版本库（Repository）</h3>
+<p><img src="https://www.liaoxuefeng.com/files/attachments/919020037470528/0" alt="git-repo"></p>
+<h3 id="每次修改如果不用git-add到暂存区那就不会加入到commit中">每次修改，如果不用<code>git add</code>到暂存区，那就不会加入到<code>commit</code>中</h3>
+<h2 id="撤销修改">撤销修改</h2>
+<h3 id="git-checkout----file可以丢弃工作区的修改"><code>git checkout -- file</code>可以丢弃工作区的修改</h3>
+<p>暂存区无内容，则撤回到版本库一样的状态</p>
+<p>暂存区有内容，撤回到暂存区状态</p>
+<h3 id="用命令git-reset-head-可以把暂存区的修改撤销掉unstage重新放回工作区">用命令<code>git reset HEAD </code>可以把暂存区的修改撤销掉（unstage），重新放回工作区</h3>
+<p>将add的内容从暂存区取出</p>
+<h3 id="git知道你删除了文件因此工作区和版本库就不一致了git-status命令会立刻告诉你哪些文件被删除了">Git知道你删除了文件，因此，工作区和版本库就不一致了，<code>git status</code>命令会立刻告诉你哪些文件被删除了</h3>
+<h3 id="现在你有两个选择一是确实要从版本库中删除该文件那就用命令git-rm删掉并且git-commit文件就从版本库中被删除了">现在你有两个选择，一是确实要从版本库中删除该文件，那就用命令<code>git rm</code>删掉，并且<code>git commit</code>，文件就从版本库中被删除了</h3>
+<h3 id="将本地库所有内容推送到远程库上">将本地库所有内容推送到远程库上：</h3>
+<pre><code>git remote add origin git@github.com:michaelliao/learngit.git
+</code></pre><h2 id="3分支管理">3.分支管理</h2>
+<h3 id="使用git-branch-name创建分支">使用<code>git branch [name]</code>创建分支</h3>
+<p>切换分支</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$ git checkout master
+</code></pre></div><p><code>git branch</code>	可以查看当前分支</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
