@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My New Hugo Site</title>
-    <link>https://horenz.github.io/</link>
+    <link>http://example.org/</link>
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 14 Jun 2020 00:26:08 +0800</lastBuildDate>
     
-	<atom:link href="https://horenz.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Git</title>
-      <link>https://horenz.github.io/post/git/</link>
+      <link>http://example.org/post/git/</link>
       <pubDate>Sun, 14 Jun 2020 00:26:08 +0800</pubDate>
       
-      <guid>https://horenz.github.io/post/git/</guid>
+      <guid>http://example.org/post/git/</guid>
       <description>Git教程 1.创建版本库 $ git init 1.1用命令git add告诉Git，把文件添加到仓库： $ git add readme.txt .-全部 1.2用命令git commit告诉Git，把文件提交到仓库： $ git commit -m &amp;#34;本次提交说明&amp;#34; 1.3运行git status命令查看状态： $ git status git status命令可以让我们时刻掌握仓库当前的状态，上面的命令输出告诉我们，readme.txt被修改过了，但还没有准备提交的修改。
 git diff顾名思义就是查看difference 如果git status告诉你有文件被修改过，用git diff可以查看修改内容 2.版本变更 在Git中，我们用git log命令查看： $ git log commit 1094adb7b9b3807259d8cb349e7df1d4d6477073 (HEAD -&amp;gt; master) Author: Michael Liao &amp;lt;askxuefeng@gmail.com&amp;gt; Date: Fri May 18 21:06:15 2018 +0800 append GPL commit e475afc93c209a690c39c13a46716e8fa000c366 Author: Michael Liao &amp;lt;askxuefeng@gmail.com&amp;gt; Date: Fri May 18 21:03:36 2018 +0800 add distributed commit eaadf4e385e865d25c48e7ca9c8395c3f7dfaef0 Author: Michael Liao &amp;lt;askxuefeng@gmail.</description>
     </item>
     
     <item>
       <title>hugo 个人blog搭建方法</title>
-      <link>https://horenz.github.io/post/firstupdate/</link>
+      <link>http://example.org/post/firstupdate/</link>
       <pubDate>Fri, 12 Jun 2020 18:28:48 +0800</pubDate>
       
-      <guid>https://horenz.github.io/post/firstupdate/</guid>
+      <guid>http://example.org/post/firstupdate/</guid>
       <description>hugo 个人blog搭建方法 1、创建站点： hugo new site [myblog] 2、下载自己喜欢的主题 主题链接：（从主题页获取）
 https://themes.gohugo.io/ 从git上克隆下来 再根目录执行
 git clone [主题href] 或者手动下载到theme文件夹
@@ -41,10 +41,10 @@ git init git add . git commit -m &amp;quot;我的hugo博客第一次提交（说
     
     <item>
       <title>.Net Json对象处理</title>
-      <link>https://horenz.github.io/post/blog/</link>
+      <link>http://example.org/post/blog/</link>
       <pubDate>Fri, 12 Jun 2020 17:20:42 +0800</pubDate>
       
-      <guid>https://horenz.github.io/post/blog/</guid>
+      <guid>http://example.org/post/blog/</guid>
       <description>.NET对象转Json 1.通过序列化将.net对象转换为JSon字符串 JsonConvert.SerializeObject(oject) List&amp;lt;Student&amp;gt; studentList = new List&amp;lt;Student&amp;gt;(); studentList.add(new Student()) lbMsg.InnerText = JsonConvert.SerializeObject(studentList); 2.使用LINQ to JSON定制JSON数据 使用JsonConvert对象的SerializeObject只是简单地将一个list或集合转换为json字符串。但是，有的时候我们的前端 框架比如ExtJs对服务端返回的数据格式是有一定要求的，比如下面的数据格式，这时就需要用到JSON.NET的LINQ to JSON，LINQ to JSON的作用就是根据需要的格式来定制json数据。
 引用==Newtonsoft.Json的dll==和==using Newtonsoft.Json.Linq的命名空间== List&amp;lt;Student&amp;gt; studentList = new List&amp;lt;Student&amp;gt;(); // 添加数据  ··· //基于创建的list使用LINQ to JSON创建期望格式的JSON数据  lbMsg.InnerText = new JObject( new JProperty(&amp;#34;total&amp;#34;,studentList.Count), new JProperty(&amp;#34;rows&amp;#34;, new JArray( //使用LINQ to JSON可直接在select语句中生成JSON数据对象，无须其它转换过程  from p in studentList select new JObject( new JProperty(&amp;#34;studentID&amp;#34;,p.StudentID), new JProperty(&amp;#34;name&amp;#34;,p.Name), new JProperty(&amp;#34;homeTown&amp;#34;,p.Hometown) ) ) ) ).ToString(); 处理客户端提交的Json数据 1.可以使用JObject或JArray的Parse方法轻松地将json字符串转换为json对象 string inputJsonString = @&amp;#34; [ {StudentID:&amp;#39;100&amp;#39;,Name:&amp;#39;aaa&amp;#39;,Hometown:&amp;#39;china&amp;#39;}, {StudentID:&amp;#39;101&amp;#39;,Name:&amp;#39;bbb&amp;#39;,Hometown:&amp;#39;us&amp;#39;}, {StudentID:&amp;#39;102&amp;#39;,Name:&amp;#39;ccc&amp;#39;,Hometown:&amp;#39;england&amp;#39;} ]&amp;#34;; JArray jsonObj = JArray.</description>
     </item>

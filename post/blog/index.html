@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="John Doe" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="https://horenz.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+    <link rel="stylesheet" href="http://example.org/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
 
     
     <meta name="twitter:card" content="summary"/>
@@ -19,7 +19,7 @@
 <meta property="og:description" content=".NET对象转Json 1.通过序列化将.net对象转换为JSon字符串 JsonConvert.SerializeObject(oject) List&lt;Student&gt; studentList = new List&lt;Student&gt;(); studentList.add(new Student()) lbMsg.InnerText = JsonConvert.SerializeObject(studentList); 2.使用LINQ to JSON定制JSON数据 使用JsonConvert对象的SerializeObject只是简单地将一个list或集合转换为json字符串。但是，有的时候我们的前端 框架比如ExtJs对服务端返回的数据格式是有一定要求的，比如下面的数据格式，这时就需要用到JSON.NET的LINQ to JSON，LINQ to JSON的作用就是根据需要的格式来定制json数据。
 引用==Newtonsoft.Json的dll==和==using Newtonsoft.Json.Linq的命名空间== List&lt;Student&gt; studentList = new List&lt;Student&gt;(); // 添加数据  ··· //基于创建的list使用LINQ to JSON创建期望格式的JSON数据  lbMsg.InnerText = new JObject( new JProperty(&#34;total&#34;,studentList.Count), new JProperty(&#34;rows&#34;, new JArray( //使用LINQ to JSON可直接在select语句中生成JSON数据对象，无须其它转换过程  from p in studentList select new JObject( new JProperty(&#34;studentID&#34;,p.StudentID), new JProperty(&#34;name&#34;,p.Name), new JProperty(&#34;homeTown&#34;,p.Hometown) ) ) ) ).ToString(); 处理客户端提交的Json数据 1.可以使用JObject或JArray的Parse方法轻松地将json字符串转换为json对象 string inputJsonString = @&#34; [ {StudentID:&#39;100&#39;,Name:&#39;aaa&#39;,Hometown:&#39;china&#39;}, {StudentID:&#39;101&#39;,Name:&#39;bbb&#39;,Hometown:&#39;us&#39;}, {StudentID:&#39;102&#39;,Name:&#39;ccc&#39;,Hometown:&#39;england&#39;} ]&#34;; JArray jsonObj = JArray." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://horenz.github.io/post/blog/" />
+<meta property="og:url" content="http://example.org/post/blog/" />
 <meta property="article:published_time" content="2020-06-12T17:20:42+08:00" />
 <meta property="article:modified_time" content="2020-06-12T17:20:42+08:00" />
 
@@ -27,7 +27,7 @@
   </head>
   <body>
     <header class="app-header">
-      <a href="https://horenz.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <a href="http://example.org/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
       <h1>My New Hugo Site</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
       <div class="app-header-social">
